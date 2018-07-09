@@ -3,8 +3,12 @@ Seolite Version 0.2
 
 Seolite plugin for VamShop.
 
-Meta tags manager.
+This will add a new tab when editing nodes to enter keywords and description
+for a given page
 
+You can also add tags by URL. Useful for custom plugin actions, ie: instead of
+adding your meta tags in the views, we can configure these tags from the
+admin interface
 
 Installation using composer:
 
@@ -24,13 +28,6 @@ Manual Installation:
 
 3. Activate plugin at Admin - Extensions - Plugins - Seolite
 
-
-Configuration
--------------
-
-1. Activate the plugin
-
-2. Seolite tab add to the content add/edit page at admin.
 
 Requirements
 ------------
