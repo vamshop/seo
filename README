@@ -1,0 +1,40 @@
+Seolite Version 0.2
+-------------------------
+
+Seolite plugin for VamShop.
+
+Meta tags manager.
+
+
+Installation using composer:
+
+1. Install package from your VamShop root directory (where composer.json located):
+
+composer require vamshop/seolite
+
+2. Activate plugin at Admin - Extensions - Plugins - Seolite
+
+
+Manual Installation:
+
+
+1. Download or clone repository http://github.com/vamshop/seolite
+
+2. Copy files from archive analytics-master folder to /app/plugins/Seolite folder
+
+3. Activate plugin at Admin - Extensions - Plugins - Seolite
+
+
+Configuration
+-------------
+
+1. Activate the plugin
+
+2. Seolite tab add to the content add/edit page at admin.
+
+Requirements
+------------
+
+VamShop 3.0 - http://github.com/vamshop/
+
+
