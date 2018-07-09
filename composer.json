@@ -1,0 +1,30 @@
+{
+    "name": "vamshop/seolite",
+    "type": "cakephp-plugin",
+    "description": "VamShop Plugin to help editing SEO meta data",
+    "homepage": "http://github.com/vamshop/seolite",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rachman Chavik",
+            "email": "contact@xintesa.com",
+            "homepage": "http://xintesa.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.8",
+        "vamshop/vamshop-core": "^3.0.0",
+        "dakota/multibyte-keyword-generator": "~1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Seolite\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Seolite\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
