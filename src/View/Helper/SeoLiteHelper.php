@@ -17,7 +17,7 @@ class SeoLiteHelper extends Helper
         }
         $path = $this->_View->viewVars['node']['custom_fields']['rel_canonical'];
         $template = '<link rel="canonical" href="%s"/>';
-        $link = sprintf($template, $this->url($path));
+        $link = sprintf($template, $path);
 
         return $link;
     }
