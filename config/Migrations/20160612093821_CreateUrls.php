@@ -10,7 +10,7 @@ class CreateUrls extends AbstractMigration
      * http://docs.phinx.org/en/latest/migrations.html#the-change-method
      * @return void
      */
-    public function change()
+    public function up()
     {
         $table = $this->table('urls');
         $table->addColumn('url', 'string', [
@@ -57,4 +57,9 @@ class CreateUrls extends AbstractMigration
         ]);
         $table->create();
     }
+    
+    public function down()
+    {
+        $this->dropTable('urls');
+    }    
 }
