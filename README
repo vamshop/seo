@@ -1,7 +1,7 @@
-Seolite Version 0.2
+Seo Version 0.2
 -------------------------
 
-Seolite plugin for VamShop.
+Seo plugin for VamShop.
 
 This will add a new tab when editing nodes to enter keywords and description
 for a given page
@@ -14,19 +14,19 @@ Installation using composer:
 
 1. Install package from your VamShop root directory (where composer.json located):
 
-composer require vamshop/seolite
+composer require vamshop/seo
 
-2. Activate plugin at Admin - Extensions - Plugins - Seolite
+2. Activate plugin at Admin - Extensions - Plugins - Seo
 
 
 Manual Installation:
 
 
-1. Download or clone repository http://github.com/vamshop/seolite
+1. Download or clone repository http://github.com/vamshop/seo
 
-2. Copy files from archive analytics-master folder to /app/plugins/Seolite folder
+2. Copy files from archive analytics-master folder to /app/plugins/Seo folder
 
-3. Activate plugin at Admin - Extensions - Plugins - Seolite
+3. Activate plugin at Admin - Extensions - Plugins - Seo
 
 
 Requirements

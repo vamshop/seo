@@ -1,8 +1,8 @@
 {
-    "name": "vamshop/seolite",
+    "name": "vamshop/seo",
     "type": "cakephp-plugin",
     "description": "VamShop Plugin to help editing SEO meta data",
-    "homepage": "http://github.com/vamshop/seolite",
+    "homepage": "http://github.com/vamshop/seo",
     "license": "MIT",
     "authors": [
         {
