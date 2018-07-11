@@ -5,7 +5,7 @@ $this->extend('/Common/admin_index');
 $this->Html->addCrumb(__d('croogo', 'URLs'));
 
 $this->start('actions');
-echo $this->Croogo->adminAction(__d('seo_lite', 'New URL'), ['action' => 'add'], ['button' => 'success']);
+echo $this->Vamshop->adminAction(__d('seo_lite', 'New URL'), ['action' => 'add'], ['button' => 'success']);
 $this->end();
 $this->append('table-heading');
 
@@ -41,11 +41,11 @@ foreach ($urls as $url): ?>
         <td><?= h($url['TrackableUpdater']['username']); ?>&nbsp;</td>
         <td><?= $this->Html->status($url->status); ?>&nbsp;</td>
         <td class="item-actions">
-            <?= $this->Croogo->adminRowAction('', ['action' => 'view', $url->id],
+            <?= $this->Vamshop->adminRowAction('', ['action' => 'view', $url->id],
                 ['icon' => 'eye-open']); ?>
-            <?= $this->Croogo->adminRowAction('', ['action' => 'edit', $url->id],
+            <?= $this->Vamshop->adminRowAction('', ['action' => 'edit', $url->id],
                 ['icon' => 'pencil']); ?>
-            <?= $this->Croogo->adminRowAction('', ['action' => 'delete', $url->id],
+            <?= $this->Vamshop->adminRowAction('', ['action' => 'delete', $url->id],
                 ['icon' => 'trash'],
                 __d('croogo', 'Are you sure you want to delete # {0}?', $url->id)); ?>
         </td>

@@ -3,10 +3,10 @@
 namespace Seolite\Shell;
 
 use Cake\ORM\TableRegistry;
-use Croogo\Core\Shell\CroogoAppShell;
+use Vamshop\Core\Shell\VamshopAppShell;
 use Seolite\SeoLiteAnalyzer;
 
-class AnalyzeShell extends CroogoAppShell
+class AnalyzeShell extends VamshopAppShell
 {
 
     public function getOptionParser()
@@ -38,7 +38,7 @@ class AnalyzeShell extends CroogoAppShell
         if (empty($value)) {
             return null;
         }
-        $metaTable = TableRegistry::get('Croogo/Meta.Meta');
+        $metaTable = TableRegistry::get('Vamshop/Meta.Meta');
 
         $meta = $metaTable->findOrCreate([
             'model' => $model,

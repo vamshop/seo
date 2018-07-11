@@ -22,19 +22,19 @@ class UrlsTable extends Table
     public function initialize(array $config)
     {
         $this->table('urls');
-        $this->addBehavior('Croogo/Core.Trackable');
+        $this->addBehavior('Vamshop/Core.Trackable');
         $this->addBehavior('Seolite.CustomFields');
-        $this->addBehavior('Croogo/Meta.Meta');
+        $this->addBehavior('Vamshop/Meta.Meta');
         $this->addBehavior('Search.Search');
         $this->addBehavior('Timestamp');
 
         $this->hasMany('Meta', [
-            'className' => 'Croogo/Meta.Meta',
+            'className' => 'Vamshop/Meta.Meta',
             'foreignKey' => 'foreign_key',
             'dependent' => true,
             'conditions' => ['Meta.model' => 'Seolite.Urls'],
         ]);
-        $this->addBehavior('Croogo/Core.Cached', [
+        $this->addBehavior('Vamshop/Core.Cached', [
             'groups' => ['seo_lite']
         ]);
         $this->searchManager()

@@ -1,10 +1,10 @@
 <?php
 use \Cake\Core\Configure;
-use \Croogo\Core\Croogo;
+use \Vamshop\Core\Vamshop;
 use \Cake\Cache\Cache;
-use \Croogo\Core\Nav;
+use \Vamshop\Core\Nav;
 
-$cacheConfig = array_merge(Configure::read('Croogo.Cache.defaultConfig'), ['groups' => ['seo_lite']]);
+$cacheConfig = array_merge(Configure::read('Vamshop.Cache.defaultConfig'), ['groups' => ['seo_lite']]);
 Cache::config('seo_lite', $cacheConfig);
 
 Configure::write('Seolite.keys', [
@@ -19,7 +19,7 @@ Configure::write('Seolite.keys', [
     ],
 ]);
 
-Croogo::hookHelper('*', 'Seolite.SeoLite');
+Vamshop::hookHelper('*', 'Seolite.SeoLite');
 
 $queryString = env('REQUEST_URI');
 if (strpos($queryString, 'admin') === false) {
@@ -30,7 +30,7 @@ if (strpos($queryString, 'admin') === false) {
  * stuff for /admin routes only
  */
 
-Croogo::hookBehavior('Croogo/Nodes.Nodes', 'Seolite.CustomFields', [
+Vamshop::hookBehavior('Vamshop/Nodes.Nodes', 'Seolite.CustomFields', [
     'priority' => 1,
 ]);
 
@@ -41,11 +41,11 @@ $options = [
         'field' => 'body',
     ],
 ];
-Croogo::hookAdminTab('Admin/Nodes/add', $title, $element, $options);
-Croogo::hookAdminTab('Admin/Nodes/edit', $title, $element, $options);
+Vamshop::hookAdminTab('Admin/Nodes/add', $title, $element, $options);
+Vamshop::hookAdminTab('Admin/Nodes/edit', $title, $element, $options);
 $options['elementData']['field'] = 'description';
-Croogo::hookAdminTab('Admin/SeoLiteUrls/add', $title, $element, $options);
-Croogo::hookAdminTab('Admin/SeoLiteUrls/edit', $title, $element, $options);
+Vamshop::hookAdminTab('Admin/SeoLiteUrls/add', $title, $element, $options);
+Vamshop::hookAdminTab('Admin/SeoLiteUrls/edit', $title, $element, $options);
 
 Nav::add('sidebar', 'seo_lite', [
     'title' => 'SeoLite',

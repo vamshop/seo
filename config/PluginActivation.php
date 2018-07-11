@@ -11,10 +11,10 @@ class PluginActivation
 
     public function onActivation()
     {
-        $CroogoPlugin = new \Croogo\Extensions\CroogoPlugin();
-        $result = $CroogoPlugin->migrate('Seolite');
+        $VamshopPlugin = new \Vamshop\Extensions\VamshopPlugin();
+        $result = $VamshopPlugin->migrate('Seolite');
         if ($result) {
-            $Setting = \Cake\ORM\TableRegistry::get('Croogo/Settings.Settings');
+            $Setting = \Cake\ORM\TableRegistry::get('Vamshop/Settings.Settings');
             $Setting->write('Seolite.installed', true);
         }
 
@@ -28,7 +28,7 @@ class PluginActivation
 
     public function onDeactivation()
     {
-        $Setting = \Cake\ORM\TableRegistry::get('Croogo/Settings.Settings');;
+        $Setting = \Cake\ORM\TableRegistry::get('Vamshop/Settings.Settings');;
         $Setting->deleteKey('Seolite.installed');
     }
 }

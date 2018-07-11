@@ -2,7 +2,7 @@
 
 namespace Seolite;
 
-use Croogo\Core\Utility\StringConverter;
+use Vamshop\Core\Utility\StringConverter;
 
 class SeoLiteAnalyzer
 {

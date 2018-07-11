@@ -16,7 +16,7 @@ $this->append('form-start', $this->Form->create($url, [
 ]));
 
 $this->append('tab-heading');
-echo $this->Croogo->adminTab(__d('croogo', 'Url'), '#seo-lite-url');
+echo $this->Vamshop->adminTab(__d('croogo', 'Url'), '#seo-lite-url');
 $this->end();
 
 $this->append('tab-content');
