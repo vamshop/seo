@@ -8,7 +8,7 @@ Seo.analyze = function (e) {
     return alert('Please save/apply your data first');
   }
 
-  $('.nav [href="#node-seolite"]').tab('show');
+  $('.nav [href="#node-seo"]').tab('show');
 
   var $keywords = $('#seo-lite-meta-keywords-value');
   var $description = $('#seo-lite-meta-description-value');

@@ -5,7 +5,7 @@ $this->Html->script('Seo.admin', ['block' => 'scriptBottom']);
 $field = isset($field) ? $field : 'body';
 $id = !empty($entity->id) ? $entity->id : null;
 
-echo $this->Html->div('clearfix', $this->Html->div('pull-right', $this->Vamshop->adminAction(__d('seolite', 'Analyze'), [
+echo $this->Html->div('clearfix', $this->Html->div('pull-right', $this->Vamshop->adminAction(__d('seo', 'Analyze'), [
     'plugin' => 'Seo',
     'controller' => 'Analyze',
     'action' => 'index',

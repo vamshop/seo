@@ -9,13 +9,13 @@ Cache::config('seo_lite', $cacheConfig);
 
 Configure::write('Seo.keys', [
     'meta_keywords' => [
-        'label' => __d('seolite', 'Keywords'),
+        'label' => __d('seo', 'Keywords'),
     ],
     'meta_description' => [
-        'label' => __d('seolite', 'Description'),
+        'label' => __d('seo', 'Description'),
     ],
     'rel_canonical' => [
-        'label' => __d('seolite', 'Canonical Page'),
+        'label' => __d('seo', 'Canonical Page'),
     ],
 ]);
 
