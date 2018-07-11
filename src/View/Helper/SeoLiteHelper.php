@@ -1,6 +1,6 @@
 <?php
 
-namespace Seolite\View\Helper;
+namespace Seo\View\Helper;
 
 use Cake\Core\Configure;
 use Cake\ORM\TableRegistry;
@@ -8,7 +8,7 @@ use Cake\Routing\Router;
 use Cake\Utility\Text;
 use Cake\View\Helper;
 
-class SeoLiteHelper extends Helper
+class SeoHelper extends Helper
 {
     public function canonical()
     {
@@ -28,7 +28,7 @@ class SeoLiteHelper extends Helper
             return;
         }
         $url = Router::normalize($this->request->url);
-        $urlTable = TableRegistry::get('Seolite.Urls');
+        $urlTable = TableRegistry::get('Seo.Urls');
         $data = $urlTable->find()
             ->select(['id', 'url'])
             ->where([

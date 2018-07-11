@@ -1,8 +1,8 @@
 <?php
 
-namespace Seolite\Controller\Admin;
+namespace Seo\Controller\Admin;
 
-use Seolite\SeoLiteAnalyzer;
+use Seo\SeoAnalyzer;
 
 class AnalyzeController extends AppController
 {
@@ -19,7 +19,7 @@ class AnalyzeController extends AppController
             $excerpt = $item->get('excerpt');
         }
 
-        $seoLiteAnalyzer = new SeoLiteAnalyzer();
+        $seoLiteAnalyzer = new SeoAnalyzer();
         $result = $seoLiteAnalyzer->analyze($body);
         if (!empty($excerpt)) {
             $result['description'] = $excerpt;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Seolite\Shell;
+namespace Seo\Shell;
 
 use Cake\ORM\TableRegistry;
 use Vamshop\Core\Shell\VamshopAppShell;
-use Seolite\SeoLiteAnalyzer;
+use Seo\SeoAnalyzer;
 
 class AnalyzeShell extends VamshopAppShell
 {
@@ -56,7 +56,7 @@ class AnalyzeShell extends VamshopAppShell
         $models = explode(',', $this->params['model']);
         $field = $this->params['field'];
 
-        $Analyzer = new SeoLiteAnalyzer();
+        $Analyzer = new SeoAnalyzer();
         foreach ($models as $model) {
             $model = TableRegistry::get($model);
             $rows = $model->find()

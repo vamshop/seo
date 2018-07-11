@@ -1,10 +1,10 @@
 <?php
 
 /**
- * SeoLiteUrl Model
+ * SeoUrl Model
  *
  */
-namespace Seolite\Model\Table;
+namespace Seo\Model\Table;
 
 use Cake\Event\Event;
 use Cake\ORM\Table;
@@ -23,7 +23,7 @@ class UrlsTable extends Table
     {
         $this->table('urls');
         $this->addBehavior('Vamshop/Core.Trackable');
-        $this->addBehavior('Seolite.CustomFields');
+        $this->addBehavior('Seo.CustomFields');
         $this->addBehavior('Vamshop/Meta.Meta');
         $this->addBehavior('Search.Search');
         $this->addBehavior('Timestamp');
@@ -32,7 +32,7 @@ class UrlsTable extends Table
             'className' => 'Vamshop/Meta.Meta',
             'foreignKey' => 'foreign_key',
             'dependent' => true,
-            'conditions' => ['Meta.model' => 'Seolite.Urls'],
+            'conditions' => ['Meta.model' => 'Seo.Urls'],
         ]);
         $this->addBehavior('Vamshop/Core.Cached', [
             'groups' => ['seo_lite']

@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Seolite\\": "src"
+            "Seo\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Seolite\\Test\\": "tests",
+            "Seo\\Test\\": "tests",
             "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
         }
     }

@@ -7,7 +7,7 @@ use \Vamshop\Core\Nav;
 $cacheConfig = array_merge(Configure::read('Vamshop.Cache.defaultConfig'), ['groups' => ['seo_lite']]);
 Cache::config('seo_lite', $cacheConfig);
 
-Configure::write('Seolite.keys', [
+Configure::write('Seo.keys', [
     'meta_keywords' => [
         'label' => __d('seolite', 'Keywords'),
     ],
@@ -19,7 +19,7 @@ Configure::write('Seolite.keys', [
     ],
 ]);
 
-Vamshop::hookHelper('*', 'Seolite.SeoLite');
+Vamshop::hookHelper('*', 'Seo.Seo');
 
 $queryString = env('REQUEST_URI');
 if (strpos($queryString, 'admin') === false) {
@@ -30,12 +30,12 @@ if (strpos($queryString, 'admin') === false) {
  * stuff for /admin routes only
  */
 
-Vamshop::hookBehavior('Vamshop/Nodes.Nodes', 'Seolite.CustomFields', [
+Vamshop::hookBehavior('Vamshop/Nodes.Nodes', 'Seo.CustomFields', [
     'priority' => 1,
 ]);
 
-$title = 'SeoLite';
-$element = 'Seolite.admin/meta';
+$title = 'Seo';
+$element = 'Seo.admin/meta';
 $options = [
     'elementData' => [
         'field' => 'body',
@@ -44,18 +44,18 @@ $options = [
 Vamshop::hookAdminTab('Admin/Nodes/add', $title, $element, $options);
 Vamshop::hookAdminTab('Admin/Nodes/edit', $title, $element, $options);
 $options['elementData']['field'] = 'description';
-Vamshop::hookAdminTab('Admin/SeoLiteUrls/add', $title, $element, $options);
-Vamshop::hookAdminTab('Admin/SeoLiteUrls/edit', $title, $element, $options);
+Vamshop::hookAdminTab('Admin/SeoUrls/add', $title, $element, $options);
+Vamshop::hookAdminTab('Admin/SeoUrls/edit', $title, $element, $options);
 
 Nav::add('sidebar', 'seo_lite', [
-    'title' => 'SeoLite',
+    'title' => 'Seo',
     'url' => 'javascript:void(0)',
     'children' => [
         'urls' => [
             'title' => __d('seo_lite', 'Meta by URL'),
             'url' => [
                 'admin' => true,
-                'plugin' => 'Seolite',
+                'plugin' => 'Seo',
                 'controller' => 'Urls',
                 'action' => 'index',
             ],

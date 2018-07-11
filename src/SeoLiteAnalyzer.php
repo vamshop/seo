@@ -1,10 +1,10 @@
 <?php
 
-namespace Seolite;
+namespace Seo;
 
 use Vamshop\Core\Utility\StringConverter;
 
-class SeoLiteAnalyzer
+class SeoAnalyzer
 {
     public function analyze($text)
     {

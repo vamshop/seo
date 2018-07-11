@@ -1,12 +1,12 @@
 <?php
 
 /**
- * SeoLiteUrls Controller
+ * SeoUrls Controller
  *
- * @property SeoLiteUrl $SeoLiteUrl
+ * @property SeoUrl $SeoUrl
  * @property PaginatorComponent $Paginator
  */
-namespace Seolite\Controller\Admin;
+namespace Seo\Controller\Admin;
 
 class UrlsController extends AppController
 {

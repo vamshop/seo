@@ -1,5 +1,5 @@
 <?php
-$this->viewVars['title_for_layout'] = sprintf('%s: %s', __d('croogo', 'URLs'), h($seoLiteUrl['SeoLiteUrl']['id']));
+$this->viewVars['title_for_layout'] = sprintf('%s: %s', __d('croogo', 'URLs'), h($seoLiteUrl['SeoUrl']['id']));
 
 $this->Html
 	->addCrumb('', '/admin', array('icon' => 'home'))
@@ -11,8 +11,8 @@ $this->Html
 <div class="row-fluid">
 	<div class="span12 actions">
 		<ul class="nav-buttons">
-		<li><?php echo $this->Html->link(__d('croogo', 'Edit URL'), array('action' => 'edit', $seoLiteUrl['SeoLiteUrl']['id']), array('button' => 'default')); ?> </li>
-		<li><?php echo $this->Form->postLink(__d('croogo', 'Delete URL'), array('action' => 'delete', $seoLiteUrl['SeoLiteUrl']['id']), array('button' => 'danger', 'escape' => true), __d('croogo', 'Are you sure you want to delete # {0}?', $seoLiteUrl['SeoLiteUrl']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__d('croogo', 'Edit URL'), array('action' => 'edit', $seoLiteUrl['SeoUrl']['id']), array('button' => 'default')); ?> </li>
+		<li><?php echo $this->Form->postLink(__d('croogo', 'Delete URL'), array('action' => 'delete', $seoLiteUrl['SeoUrl']['id']), array('button' => 'danger', 'escape' => true), __d('croogo', 'Are you sure you want to delete # {0}?', $seoLiteUrl['SeoUrl']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__d('croogo', 'List URLs'), array('action' => 'index'), array('button' => 'default')); ?> </li>
 		<li><?php echo $this->Html->link(__d('croogo', 'New URL'), array('action' => 'add'), array('button' => 'success')); ?> </li>
 		</ul>
@@ -23,27 +23,27 @@ $this->Html
 	<dl class="inline">
 		<dt><?php echo __d('croogo', 'Id'); ?></dt>
 		<dd>
-			<?php echo h($seoLiteUrl['SeoLiteUrl']['id']); ?>
+			<?php echo h($seoLiteUrl['SeoUrl']['id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __d('croogo', 'Url'); ?></dt>
 		<dd>
-			<?php echo h($seoLiteUrl['SeoLiteUrl']['url']); ?>
+			<?php echo h($seoLiteUrl['SeoUrl']['url']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __d('croogo', 'Description'); ?></dt>
 		<dd>
-			<?php echo h($seoLiteUrl['SeoLiteUrl']['description']); ?>
+			<?php echo h($seoLiteUrl['SeoUrl']['description']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __d('croogo', 'Status'); ?></dt>
 		<dd>
-			<?php echo h($seoLiteUrl['SeoLiteUrl']['status']); ?>
+			<?php echo h($seoLiteUrl['SeoUrl']['status']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __d('croogo', 'Created'); ?></dt>
 		<dd>
-			<?php echo h($seoLiteUrl['SeoLiteUrl']['created']); ?>
+			<?php echo h($seoLiteUrl['SeoUrl']['created']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __d('croogo', 'Created By'); ?></dt>
@@ -53,7 +53,7 @@ $this->Html
 		</dd>
 		<dt><?php echo __d('croogo', 'Updated'); ?></dt>
 		<dd>
-			<?php echo h($seoLiteUrl['SeoLiteUrl']['updated']); ?>
+			<?php echo h($seoLiteUrl['SeoUrl']['updated']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __d('croogo', 'Updated By'); ?></dt>

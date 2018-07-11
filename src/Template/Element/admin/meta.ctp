@@ -1,12 +1,12 @@
 <?php
 
-$this->Html->script('Seolite.admin', ['block' => 'scriptBottom']);
+$this->Html->script('Seo.admin', ['block' => 'scriptBottom']);
 
 $field = isset($field) ? $field : 'body';
 $id = !empty($entity->id) ? $entity->id : null;
 
 echo $this->Html->div('clearfix', $this->Html->div('pull-right', $this->Vamshop->adminAction(__d('seolite', 'Analyze'), [
-    'plugin' => 'Seolite',
+    'plugin' => 'Seo',
     'controller' => 'Analyze',
     'action' => 'index',
     '?' => [
@@ -26,7 +26,7 @@ echo $this->Html->div('clearfix', $this->Html->div('pull-right', $this->Vamshop-
     ],
 ])));
 
-$keys = \Cake\Core\Configure::read('Seolite.keys');
+$keys = \Cake\Core\Configure::read('Seo.keys');
 $fields = [
     'id' => ['type' => 'hidden'],
     'model' => ['type' => 'hidden'],

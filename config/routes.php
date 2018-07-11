@@ -3,7 +3,7 @@
 use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 
-Router::plugin('Seolite', ['path' => '/'], function (RouteBuilder $routeBuilder) {
+Router::plugin('Seo', ['path' => '/'], function (RouteBuilder $routeBuilder) {
     $routeBuilder->prefix('admin', function (RouteBuilder $routeBuilder) {
         $routeBuilder->extensions(['json']);
 

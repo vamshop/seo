@@ -1,6 +1,6 @@
 <?php
 
-namespace Seolite\Config;
+namespace Seo\Config;
 
 class PluginActivation
 {
@@ -12,10 +12,10 @@ class PluginActivation
     public function onActivation()
     {
         $VamshopPlugin = new \Vamshop\Extensions\VamshopPlugin();
-        $result = $VamshopPlugin->migrate('Seolite');
+        $result = $VamshopPlugin->migrate('Seo');
         if ($result) {
             $Setting = \Cake\ORM\TableRegistry::get('Vamshop/Settings.Settings');
-            $Setting->write('Seolite.installed', true);
+            $Setting->write('Seo.installed', true);
         }
 
         return $result;
@@ -29,6 +29,6 @@ class PluginActivation
     public function onDeactivation()
     {
         $Setting = \Cake\ORM\TableRegistry::get('Vamshop/Settings.Settings');;
-        $Setting->deleteKey('Seolite.installed');
+        $Setting->deleteKey('Seo.installed');
     }
 }

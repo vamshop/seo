@@ -1,6 +1,6 @@
 <?php
 
-namespace Seolite\Model\Behavior;
+namespace Seo\Model\Behavior;
 
 use Cake\Core\Configure;
 use Cake\Event\Event;
@@ -53,7 +53,7 @@ class CustomFieldsBehavior extends Behavior
 
     public function formatSeoFields(Event $event, Entity $entity)
     {
-        $keySettings = Configure::read('Seolite.keys');
+        $keySettings = Configure::read('Seo.keys');
         $keys = array_keys($keySettings);
         if (!isset($entity->meta)) {
             return;

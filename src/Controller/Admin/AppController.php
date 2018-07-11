@@ -1,6 +1,6 @@
 <?php
 
-namespace Seolite\Controller\Admin;
+namespace Seo\Controller\Admin;
 
 use Vamshop\Core\Controller\Admin\AppController as BaseController;
 

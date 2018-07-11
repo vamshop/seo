@@ -1,6 +1,6 @@
-SeoLite = {}
+Seo = {}
 
-SeoLite.analyze = function (e) {
+Seo.analyze = function (e) {
   e && e.preventDefault();
   var url = e.currentTarget.attributes['href'].value;
 
@@ -26,5 +26,5 @@ SeoLite.analyze = function (e) {
 };
 
 $(function () {
-  $('body').on('click', 'a[data-toggle=seo-lite-analyze]', SeoLite.analyze);
+  $('body').on('click', 'a[data-toggle=seo-lite-analyze]', Seo.analyze);
 });
