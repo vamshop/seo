@@ -48,6 +48,7 @@ Vamshop::hookAdminTab('Admin/SeoUrls/add', $title, $element, $options);
 Vamshop::hookAdminTab('Admin/SeoUrls/edit', $title, $element, $options);
 
 Nav::add('sidebar', 'seo_lite', [
+    'icon' => 'bolt',
     'title' => 'Seo',
     'url' => 'javascript:void(0)',
     'children' => [
