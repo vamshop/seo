@@ -1,14 +1,14 @@
 <?php
-$this->assign('title', __d('croogo', 'URLs'));
+$this->assign('title', __d('vamshop', 'URLs'));
 $this->extend('/Common/admin_edit');
 
-$this->Html->addCrumb(__d('croogo', 'URLs'), ['action' => 'index']);
+$this->Html->addCrumb(__d('vamshop', 'URLs'), ['action' => 'index']);
 
 if ($this->request->param('action') === 'edit') {
     $this->Html->addCrumb($url->url);
     $this->assign('title', 'Url: ' . $url->url);
 } else {
-    $this->Html->addCrumb(__d('croogo', 'Add'));
+    $this->Html->addCrumb(__d('vamshop', 'Add'));
 }
 
 $this->append('form-start', $this->Form->create($url, [
@@ -16,7 +16,7 @@ $this->append('form-start', $this->Form->create($url, [
 ]));
 
 $this->append('tab-heading');
-echo $this->Vamshop->adminTab(__d('croogo', 'Url'), '#seo-lite-url');
+echo $this->Vamshop->adminTab(__d('vamshop', 'Url'), '#seo-lite-url');
 $this->end();
 
 $this->append('tab-content');

@@ -1,8 +1,8 @@
 <?php
-$this->assign('title', __d('croogo', 'URLs'));
+$this->assign('title', __d('vamshop', 'URLs'));
 $this->extend('/Common/admin_index');
 
-$this->Html->addCrumb(__d('croogo', 'URLs'));
+$this->Html->addCrumb(__d('vamshop', 'URLs'));
 
 $this->start('actions');
 echo $this->Vamshop->adminAction(__d('seo_lite', 'New URL'), ['action' => 'add'], ['button' => 'success']);
@@ -17,7 +17,7 @@ $tableHeaders = $this->Html->tableHeaders([
     $this->Paginator->sort('updated'),
     $this->Paginator->sort('updated_by'),
     $this->Paginator->sort('status'),
-    __d('croogo', 'Actions'),
+    __d('vamshop', 'Actions'),
 ]);
 echo $this->Html->tag('thead', $tableHeaders);
 
@@ -47,7 +47,7 @@ foreach ($urls as $url): ?>
                 ['icon' => 'pencil']); ?>
             <?= $this->Vamshop->adminRowAction('', ['action' => 'delete', $url->id],
                 ['icon' => 'trash'],
-                __d('croogo', 'Are you sure you want to delete # {0}?', $url->id)); ?>
+                __d('vamshop', 'Are you sure you want to delete # {0}?', $url->id)); ?>
         </td>
     </tr>
 <?php endforeach;
